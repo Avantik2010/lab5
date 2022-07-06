@@ -1,4 +1,4 @@
-package com.studentmanagment.entity;
+package com.studentmanagement.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "student")
-public class student {
+public class Student {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -28,12 +28,12 @@ public class student {
 	@Column(name="country")
 	private String country;
 	
-	public student()
+	public Student()
 	{
 		
 	}
 
-	public student(String firstName, String lastName, String course, String country) {
+	public Student(String firstName, String lastName, String course, String country) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;

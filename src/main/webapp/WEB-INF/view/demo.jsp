@@ -8,6 +8,6 @@
 </head>
 <body>
 <h3>Welcome to the Student Management Portal</h3>
-<a href = "student/list">Click here to view the list of students</a>
+<a href = "/StudentManagement/student/list">Click here to view the list of students</a>
 </body>
 </html>

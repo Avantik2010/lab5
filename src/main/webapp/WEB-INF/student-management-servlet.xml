@@ -13,7 +13,7 @@
 
 	<!-- Add support for component scanning -->
 	<context:component-scan
-		base-package="com.greatLearning.studentManagement" />
+		base-package="com.greatLearning.studentmanagement" />
 
 
 
@@ -40,7 +40,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.greatLearning.studentManagement.entity.Student</value>
+				<value>com.greatLearning.studentmanagement.entity.Student</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

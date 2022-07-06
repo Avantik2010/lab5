@@ -1,6 +1,16 @@
-package com.studentmanagment.controller;
+package com.studentmanagement.controller;
 
-import com.studentmanagment.service.StudentService;
+import java.util.List;
+
+import com.studentmanagement.entity.Student;
+import com.studentmanagement.service.StudentService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/student")
@@ -13,7 +23,7 @@ public class StudentController {
 	@RequestMapping ("/list")
 	public String listBooks(Model theModel) {
 		System.out.println("request recieved");
-		List<student> theStudents = studentService.findAll();
+		List<Student> theStudents = studentService.findAll();
 		theModel.addAttribute ("Student",theStudents);
 		return"list-Students";
 		
@@ -36,9 +46,9 @@ public class StudentController {
 		if (id != 0) {
 			theStudent = studentService.findById(id);
 			theStudent.setFirstName(firstName);
-			theStudent.setLastName(LastName);
-			theStudent.setCourse(Course);
-			theStudent.setCountry(Country);
+			theStudent.setLastName(lastName);
+			theStudent.setCourse(course);
+			theStudent.setCountry(country);
 		} else
 			
 			theStudent = new Student(firstName, lastName, course, country);
